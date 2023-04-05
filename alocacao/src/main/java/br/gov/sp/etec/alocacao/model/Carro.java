@@ -1,12 +1,23 @@
 package br.gov.sp.etec.alocacao.model;
 
+
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Carro {
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String cor;
 	private String placa;
 	private Long chassi;
 	private String modelo;
+	
+	
 	public Long getId() {
 		return id;
 	}

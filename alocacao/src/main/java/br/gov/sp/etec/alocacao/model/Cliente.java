@@ -1,5 +1,6 @@
 package br.gov.sp.etec.alocacao.model;
 
+
 public class Cliente {
 	
 	private Long id;
@@ -7,6 +8,16 @@ public class Cliente {
 	private String cpf;
 	private String email;
 	private String tel;
+	
+	
+	public Cliente(String nome, String cpf, String email, String tel) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.email = email;
+		this.tel = tel;
+	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -38,6 +49,6 @@ public class Cliente {
 		this.tel = tel;
 	}
 	
-		
+	
 
 }
