@@ -1,8 +1,16 @@
 package br.gov.sp.etec.alocacao.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class Cliente {
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id_cliente")
 	private Long id;
 	private String nome;
 	private String cpf;
@@ -16,6 +24,10 @@ public class Cliente {
 		this.cpf = cpf;
 		this.email = email;
 		this.tel = tel;
+	}
+	
+	public Cliente() {
+		
 	}
 	
 	public Long getId() {
